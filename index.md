@@ -11,9 +11,9 @@ title: 首页
     </div>
     <div class="profile-right">
         <div class="profile-bio">
-            <p>你好！我是 Warnstein，欢迎来到我的个人博客。</p>
-            <p>这里记录着我的学习笔记、技术分享和生活感悟。我热爱编程，喜欢探索新技术，也享受用文字记录思考的过程。</p>
-            <p>希望这些内容能对你有所帮助，也欢迎与我交流讨论！</p>
+            <p>Hi! I'm Warnstein — welcome to my personal blog.</p>
+            <p>Here, I document my study notes, technical explorations, and reflections on life. I’m passionate about programming, enjoy diving into new technologies, and appreciate the process of capturing my thoughts through writing.</p>
+            <p>I hope the content here can be helpful to you, and you're always welcome to reach out and discuss ideas with me!</p>
         </div>
     </div>
 </div>
@@ -21,13 +21,9 @@ title: 首页
 <div class="blog-index">
     <h2>博客文章</h2>
     <div class="blog-list">
-        <a href="/about" class="blog-item">
-            <h3>关于我</h3>
-            <p>个人简介与联系方式</p>
-        </a>
         <a href="/wiki/intro" class="blog-item">
-            <h3>Wiki 简介</h3>
-            <p>纯文本风格的 Wiki 模板介绍</p>
+            <h3>Blog 简介</h3>
+            <p>纯文本风格的 Blog 模板介绍</p>
         </a>
         <a href="/wiki/example" class="blog-item">
             <h3>示例页面</h3>
