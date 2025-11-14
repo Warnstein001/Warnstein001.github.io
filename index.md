@@ -22,7 +22,7 @@ title: 首页
     <h2>Blog Post</h2>
     <div class="blog-list">
         <!-- 单篇文章 -->
-        <a href="/about" class="blog-item">
+        <a href="/methods" class="blog-item">
             <h3>Introduction to Learning Methods</h3>
             <p>This is a template for writing an article on strategic study techniques.</p>
         </a>
