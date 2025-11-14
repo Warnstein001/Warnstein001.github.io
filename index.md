@@ -32,33 +32,13 @@ title: 首页
             <h3>Introduction to Learning Methods</h3>
             <p>This is a template for writing an article on strategic study techniques.</p>
         </a>
-        <!-- 文件夹：Wiki 笔记 -->
-        <div class="blog-folder">
-         <div class="folder-header">
-                <h3>CSAPP</h3>
-                <p>Computer System A Programmmer's Perspective</p>
-            </div>
-            <div class="folder-content">
-                <a href="/CSAPP/Introduction" class="blog-item-nested">
-                    <h4>CSAPP introduce</h4>
-                    <p>Introduction</p>
-                </a>
-            </div>
-        </div>
+        <!-- 文件夹：CSAPP 笔记 -->
+        <a href="/CSAPP/" class="blog-item">
+            <h3>📁 CSAPP</h3>
+            <p>Computer System: A Programmer's Perspective</p>
+        </a>
         <!-- 可以继续添加更多文章或文件夹 -->
     </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const folders = document.querySelectorAll('.blog-folder');
-    folders.forEach(folder => {
-        const header = folder.querySelector('.folder-header');
-        const content = folder.querySelector('.folder-content');
-        
-        header.addEventListener('click', function() {
-            folder.classList.toggle('open');
-        });
-    });
-});
-</script>
+
