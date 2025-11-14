@@ -23,27 +23,10 @@ title: 首页
     <div class="blog-list">
         <!-- 单篇文章 -->
         <a href="/about" class="blog-item">
-            <h3>📄 单篇文章模板</h3>
-            <p>这个是写单篇文章的模板</p>
+            <h3>Introduction to Learning Methods</h3>
+            <p>This is a template for writing an article on strategic study techniques.</p>
         </a>
         <!-- 文件夹：Wiki 笔记 -->
-        <div class="blog-folder">
-            <div class="folder-header">
-                <h3>模板</h3>
-                <p>文件夹模板</p>
-            </div>
-            <div class="folder-content">
-                <a href="/wiki/intro" class="blog-item-nested">
-                    <h4>Blog 01</h4>
-                    <p>The first blog</p>
-                </a>
-                <!-- 继续在该文件夹下添加笔记 -->
-                <a href="/wiki/example" class="blog-item-nested">
-                    <h4>Blog 02</h4>
-                    <p>The second blog</p>
-                </a>
-            </div>
-        </div>
         <div class="blog-folder">
          <div class="folder-header">
                 <h3>CSAPP</h3>
