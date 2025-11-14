@@ -115,10 +115,17 @@
 
         /* 个人资料区 */
         .profile {
-            text-align: center;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
             padding-bottom: 40px;
             border-bottom: 1px solid #e5e5e5;
             margin-bottom: 40px;
+        }
+
+        .profile-left {
+            flex-shrink: 0;
+            text-align: left;
         }
 
         .profile-avatar {
@@ -134,13 +141,41 @@
             font-size: 32px;
             font-weight: 700;
             color: #1a1a1a;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+        }
+
+        .profile-title {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        .profile-right {
+            flex: 1;
+            padding-top: 20px;
         }
 
         .profile-bio {
             font-size: 16px;
-            color: #666;
+            color: #555;
+            line-height: 1.7;
             margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .profile-left {
+                text-align: center;
+            }
+            
+            .profile-right {
+                padding-top: 0;
+            }
         }
 
         /* 博客索引 */

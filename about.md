@@ -3,6 +3,6 @@ layout: default
 title: 关于
 ---
 
-# 关于我
+# 阿松大
 
 这里写你的简介。
