@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }} - {{ site.title }}</title>
 
+<!-- MathJax 数学公式支持 -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <style>
 * {
     margin: 0;
@@ -86,6 +90,7 @@ body {
 .main {
     flex: 1;
     margin-left: 260px;
+    margin-right: 260px;
     padding: 60px 80px;
     max-width: 1200px;
 }
@@ -187,6 +192,110 @@ body {
     background: none;
     padding: 0;
 }
+
+/* 表格样式 */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.content table th,
+.content table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e5e5e5;
+}
+
+.content table th {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.content table tr:hover {
+    background: #fafafa;
+}
+
+/* 数学公式样式 */
+.content .MathJax {
+    font-size: 1.1em;
+}
+
+/* 右侧目录大纲 */
+.toc-sidebar {
+    width: 260px;
+    background: #fff;
+    border-left: 1px solid #e5e5e5;
+    padding: 40px 30px;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.toc-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-list a {
+    display: block;
+    padding: 6px 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+}
+
+.toc-list a:hover {
+    color: #1a1a1a;
+    border-left-color: #0066cc;
+}
+
+.toc-list a.active {
+    color: #0066cc;
+    border-left-color: #0066cc;
+    font-weight: 500;
+}
+
+.toc-list .toc-h2 {
+    padding-left: 12px;
+}
+
+.toc-list .toc-h3 {
+    padding-left: 24px;
+    font-size: 13px;
+}
+
+.toc-list .toc-h4 {
+    padding-left: 36px;
+    font-size: 12px;
+}
+
+/* 响应式：隐藏右侧目录 */
+@media (max-width: 1400px) {
+    .toc-sidebar {
+        display: none;
+    }
+    
+    .main {
+        margin-right: 0;
+    }
+}
 </style>
 
 </head>
@@ -201,12 +310,6 @@ body {
             <a href="/" class="nav-link">首页</a>
             <a href="/about" class="nav-link">关于</a>
         </nav>
-        
-        <nav class="nav-section">
-            <div class="nav-section-title">Wiki</div>
-            <a href="/wiki/intro" class="nav-link">简介</a>
-            <a href="/wiki/example" class="nav-link">示例页面</a>
-        </nav>
     </aside>
 
     <!-- 主内容 -->
@@ -215,6 +318,80 @@ body {
             {{ content }}
         </article>
     </main>
+
+    <!-- 右侧目录大纲 -->
+    <aside class="toc-sidebar">
+        <div class="toc-title">目录</div>
+        <nav class="toc-list" id="toc"></nav>
+    </aside>
 </div>
+
+<script>
+// 生成目录
+document.addEventListener('DOMContentLoaded', function() {
+    const content = document.querySelector('.content');
+    const toc = document.getElementById('toc');
+    const headings = content.querySelectorAll('h1, h2, h3, h4');
+    
+    if (headings.length === 0) {
+        document.querySelector('.toc-sidebar').style.display = 'none';
+        document.querySelector('.main').style.marginRight = '0';
+        return;
+    }
+    
+    headings.forEach((heading, index) => {
+        // 为标题添加 ID
+        if (!heading.id) {
+            heading.id = 'heading-' + index;
+        }
+        
+        // 创建目录项
+        const link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent;
+        link.className = 'toc-' + heading.tagName.toLowerCase();
+        
+        toc.appendChild(link);
+    });
+    
+    // 滚动高亮当前标题
+    const links = toc.querySelectorAll('a');
+    
+    function highlightTOC() {
+        let current = '';
+        
+        headings.forEach(heading => {
+            const rect = heading.getBoundingClientRect();
+            if (rect.top <= 100) {
+                current = heading.id;
+            }
+        });
+        
+        links.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', highlightTOC);
+    highlightTOC();
+    
+    // 平滑滚动
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

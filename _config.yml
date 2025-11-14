@@ -2,3 +2,9 @@ title: "Warnstein"
 description: "A lightweight pure-text blog"
 markdown: kramdown
 theme: null
+
+# Kramdown 配置
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
