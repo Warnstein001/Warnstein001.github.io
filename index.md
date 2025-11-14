@@ -29,18 +29,18 @@ title: 首页
         <!-- 文件夹：Wiki 笔记 -->
         <div class="blog-folder">
             <div class="folder-header">
-                <h3>📁 Wiki 笔记</h3>
-                <p>技术文档与学习笔记集合</p>
+                <h3>模板</h3>
+                <p>文件夹模板</p>
             </div>
             <div class="folder-content">
                 <a href="/wiki/intro" class="blog-item-nested">
-                    <h4>Wiki 简介</h4>
-                    <p>纯文本风格的 Wiki 模板介绍</p>
+                    <h4>Blog 01</h4>
+                    <p>The first blog</p>
                 </a>
                 <!-- 继续在该文件夹下添加笔记 -->
                 <a href="/wiki/example" class="blog-item-nested">
-                    <h4>示例页面</h4>
-                    <p>Markdown 使用示例与代码演示</p>
+                    <h4>Blog 02</h4>
+                    <p>The second blog</p>
                 </a>
             </div>
         </div>
@@ -50,7 +50,7 @@ title: 首页
                 <p>Computer System A Programmmer's Perspective</p>
             </div>
             <div class="folder-content">
-                <a href="/CSAPP/intro" class="blog-item-nested">
+                <a href="/CSAPP/Introduction" class="blog-item-nested">
                     <h4>CSAPP introduce</h4>
                     <p>Introduction</p>
                 </a>
