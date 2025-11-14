@@ -23,8 +23,8 @@ title: 首页
     <div class="blog-list">
         <!-- 单篇文章 -->
         <a href="/about" class="blog-item">
-            <h3>📄 关于我</h3>
-            <p>个人简介与联系方式</p>
+            <h3>📄 单篇文章模板</h3>
+            <p>这个是写单篇文章的模板</p>
         </a>
         <!-- 文件夹：Wiki 笔记 -->
         <div class="blog-folder">
