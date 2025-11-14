@@ -1,0 +1,4 @@
+title: "My Wiki"
+description: "A lightweight pure-text wiki"
+markdown: kramdown
+theme: null
