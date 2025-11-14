@@ -37,9 +37,22 @@ title: 首页
                     <h4>Wiki 简介</h4>
                     <p>纯文本风格的 Wiki 模板介绍</p>
                 </a>
+                <!-- 继续在该文件夹下添加笔记 -->
                 <a href="/wiki/example" class="blog-item-nested">
                     <h4>示例页面</h4>
                     <p>Markdown 使用示例与代码演示</p>
+                </a>
+            </div>
+        </div>
+        <div class="blog-folder">
+         <div class="folder-header">
+                <h3>CSAPP</h3>
+                <p>Computer System A Programmmer's Perspective</p>
+            </div>
+            <div class="folder-content">
+                <a href="/CSAPP/intro" class="blog-item-nested">
+                    <h4>CSAPP introduce</h4>
+                    <p>Introduction</p>
                 </a>
             </div>
         </div>
