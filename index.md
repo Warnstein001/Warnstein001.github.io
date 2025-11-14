@@ -21,13 +21,43 @@ title: 首页
 <div class="blog-index">
     <h2>博客文章</h2>
     <div class="blog-list">
-        <a href="/wiki/intro" class="blog-item">
-            <h3>Blog 简介</h3>
-            <p>纯文本风格的 Blog 模板介绍</p>
+        <!-- 单篇文章 -->
+        <a href="/about" class="blog-item">
+            <h3>📄 关于我</h3>
+            <p>个人简介与联系方式</p>
         </a>
-        <a href="/wiki/example" class="blog-item">
-            <h3>示例页面</h3>
-            <p>Markdown 使用示例与代码演示</p>
-        </a>
+        <!-- 文件夹：Wiki 笔记 -->
+        <div class="blog-folder">
+            <div class="folder-header">
+                <h3>📁 Wiki 笔记</h3>
+                <p>技术文档与学习笔记集合</p>
+            </div>
+            <div class="folder-content">
+                <a href="/wiki/intro" class="blog-item-nested">
+                    <h4>Wiki 简介</h4>
+                    <p>纯文本风格的 Wiki 模板介绍</p>
+                </a>
+                <a href="/wiki/example" class="blog-item-nested">
+                    <h4>示例页面</h4>
+                    <p>Markdown 使用示例与代码演示</p>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 可以继续添加更多文章或文件夹 -->
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const folders = document.querySelectorAll('.blog-folder');
+    folders.forEach(folder => {
+        const header = folder.querySelector('.folder-header');
+        const content = folder.querySelector('.folder-content');
+        
+        header.addEventListener('click', function() {
+            folder.classList.toggle('open');
+        });
+    });
+});
+</script>

@@ -232,6 +232,100 @@
             color: #666;
             margin: 0;
         }
+
+        /* 文件夹样式 */
+        .blog-folder {
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .blog-folder:hover {
+            border-color: #e5e5e5;
+        }
+
+        .folder-header {
+            padding: 20px 24px;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        .folder-header::after {
+            content: '▼';
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transition: transform 0.3s ease;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .blog-folder.open .folder-header::after {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .folder-header h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 8px 0;
+        }
+
+        .folder-header p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .folder-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .blog-folder.open .folder-content {
+            max-height: 1000px;
+            padding: 0 24px 16px 24px;
+        }
+
+        .blog-item-nested {
+            display: block;
+            padding: 16px 20px;
+            background: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid #e5e5e5;
+            margin-bottom: 12px;
+        }
+
+        .blog-item-nested:last-child {
+            margin-bottom: 0;
+        }
+
+        .blog-item-nested:hover {
+            background: #f9f9f9;
+            border-color: #d5d5d5;
+            transform: translateX(4px);
+        }
+
+        .blog-item-nested h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 6px 0;
+        }
+
+        .blog-item-nested p {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+        }
     </style>
 
 </head>
