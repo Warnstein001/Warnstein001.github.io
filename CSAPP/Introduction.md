@@ -1,7 +1,7 @@
 ---
 author: Warnstein
 title: CSAPP 课程简介
-create: "{{date}}"
+create: 2025-11-14
 ---
 # 深入理解计算机系统：导论
 

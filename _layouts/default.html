@@ -89,10 +89,10 @@ body {
 /* 主内容区 */
 .main {
     flex: 1;
-    margin-left: 260px;
+    margin-left: 320px;
+    margin-right: 60px;
     padding: 60px 0;
-    display: flex;
-    justify-content: center;
+    max-width: 820px;
 }
 
 .content {
@@ -100,8 +100,6 @@ body {
     padding: 60px 70px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    width: 100%;
-    max-width: 820px;
 }
 
 /* 响应式设计 */
@@ -241,16 +239,10 @@ body {
 .toc-sidebar {
     width: 260px;
     position: fixed;
-    right: calc((100vw - 260px - 820px) / 2 - 280px);
+    right: 50px;
     top: 100px;
     max-height: calc(100vh - 200px);
     overflow-y: auto;
-}
-
-@media (min-width: 1600px) {
-    .toc-sidebar {
-        right: calc((100vw - 260px - 820px) / 2 - 300px);
-    }
 }
 
 .toc-container {
