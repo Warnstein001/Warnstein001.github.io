@@ -19,7 +19,7 @@ title: 首页
 </div>
 
 <div class="blog-index">
-    <h2>博客文章</h2>
+    <h2>Blog Post</h2>
     <div class="blog-list">
         <!-- 单篇文章 -->
         <a href="/about" class="blog-item">
