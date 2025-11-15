@@ -11,11 +11,11 @@ title: Blog Posts
     <article class="post-card">
         <a href="/methods" class="post-link">
             <div class="post-image">
-                <img src="/assets/blog-default.jpg" alt="Learning Methods">
+                <img src="/assets/十六字方针.jpg" alt="Learning Methods">
             </div>
             <div class="post-content">
-                <h2>Introduction to Learning Methods</h2>
-                <p>This is a template for writing an article on strategic study techniques. Explore effective learning strategies and methods to improve your study efficiency.</p>
+                <h2>十六字方针</h2>
+                <p>学以致用 学而时习 循序渐进 持之以恒</p>
                 <div class="post-meta">
                     <span class="post-date">📅 2025-11-14</span>
                     <span class="post-tags">#学习方法 #效率</span>
