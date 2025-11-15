@@ -2,11 +2,6 @@
 layout: default
 title: CSAPP 笔记
 ---
-
-# CSAPP - Computer System: A Programmer's Perspective
-
-深入理解计算机系统课程笔记集合。
-
 <div class="post-list">
     <article class="post-card">
         <a href="/CSAPP/Introduction" class="post-link">
