@@ -2,11 +2,6 @@
 layout: default
 title: Blog Posts
 ---
-
-# Blog Posts
-
-我的技术博客文章集合。
-
 <div class="post-list">
     <article class="post-card">
         <a href="/methods" class="post-link">
