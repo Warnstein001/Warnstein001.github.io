@@ -4,21 +4,22 @@ title: Blog Posts
 ---
 <div class="post-list">
     <article class="post-card">
-        <a href="/methods" class="post-link">
+        <a href="/methods/十六字方针" class="post-link">
             <div class="post-image">
                 <img src="/assets/十六字方针.jpg" alt="Learning Methods">
             </div>
             <div class="post-content">
-                <h2>十六字方针</h2>
-                <p>学以致用 学而时习 循序渐进 持之以恒</p>
+                <h2>学习方法：十六字方针</h2>
+                <p>学以致用、学而时习、循序渐进、持之以恒 —— 探索高效学习的核心方法论</p>
                 <div class="post-meta">
                     <span class="post-date">📅 2025-11-14</span>
-                    <span class="post-tags">#学习方法 #效率</span>
+                    <span class="post-tags">#学习方法 #效率 #方法论</span>
                 </div>
             </div>
         </a>
     </article>
     
+
     <!-- 可以继续添加更多文章 -->
 </div>
 
