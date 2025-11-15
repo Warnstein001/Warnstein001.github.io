@@ -29,8 +29,8 @@ title: 首页
     <div class="blog-list">
         <!-- Blog Posts 文件夹 -->
         <a href="/blog/" class="blog-item">
-            <h3>📝 Blog Posts</h3>
-            <p>Technical articles and learning notes</p>
+            <h3>📝 Introduction to Learning Methods</h3>
+            <p>I'd like to share some of my study methods here.</p>
         </a>
         <!-- 文件夹：CSAPP 笔记 -->
         <a href="/CSAPP/" class="blog-item">
