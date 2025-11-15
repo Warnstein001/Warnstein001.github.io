@@ -27,10 +27,10 @@ title: 首页
 <div class="blog-index">
     <h2>Blog Post</h2>
     <div class="blog-list">
-        <!-- 单篇文章 -->
-        <a href="/methods" class="blog-item">
-            <h3>Introduction to Learning Methods</h3>
-            <p>This is a template for writing an article on strategic study techniques.</p>
+        <!-- Blog Posts 文件夹 -->
+        <a href="/blog/" class="blog-item">
+            <h3>📝 Blog Posts</h3>
+            <p>Technical articles and learning notes</p>
         </a>
         <!-- 文件夹：CSAPP 笔记 -->
         <a href="/CSAPP/" class="blog-item">
