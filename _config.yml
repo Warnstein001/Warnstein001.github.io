@@ -102,7 +102,7 @@ theme: a4
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Warnstein001/Warnstein001.github.io.git
+  repo: git@github.com:Warnstein001/Warnstein001.github.io.git
   branch: main
 # hexo markdown支持数学公式插件
 mathjax:
