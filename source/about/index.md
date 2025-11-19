@@ -1,7 +1,7 @@
 ---
 title: 关于
 date: 2025-11-19 16:24:00
-type: about
+type: page
 comments: false
 ---
 
