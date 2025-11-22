@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="微积分规划" />
+    <meta name="hexo-theme-A4" content="v2.0.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/headshot.jpg">
+    <title>Warnstein</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
+
+
+   
+        
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+    <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css' /> 
+<meta name="generator" content="Hexo 8.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+    
+
+    
+    
+
+
+
+    
+
+    
+    
+
+
+
+
+    
+    
+
+
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '40px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            
+                <div class="left-toc-container">
+                    <nav id="toc" class="bs-docs-sidebar"></nav>
+                </div>
+            
+        
+        <div class="paper">
+
+            
+
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <style>
+            .header-img {
+                width: 56px;
+                height: auto;
+                object-fit: cover; /* 保持图片比例 */
+                transition: transform 0.3s ease-in-out; 
+                border-radius: 50%; 
+            }
+            
+        </style>
+        <img 
+            alt="^-^" 
+            cache-control="max-age=86400" 
+            class="header-img" 
+            src="/img/headshot.jpg" 
+        />
+        <div class="header-content">
+            <a class="logo" href="/">Warnstein</a> 
+            <span class="description">CS本科生 | 阅读写作爱好者</span> 
+        </div>
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">🏡首页</a></li>
+            
+        
+            
+                <li><a href="/list/">🌌文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">📌标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">🔖分类</a></li>
+            
+        
+            
+                <li><a href="/bookmarks/">📚书摘</a></li>
+            
+        
+            
+                <li><a href="/about/">🌕关于</a></li>
+            
+        
+    </ul>
+</div>
+
+                    
+                    
+
+                    
+                    
+
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+    
+
+    
+        
+            
+                <div class="post-main-title" style="text-align: center;">
+                    微积分规划
+                </div>
+            
+        
+      
+    
+
+    
+
+        
+            <div class="post-head-meta-center">
+        
+                
+                    <span>最近更新：2025-11-22</span> 
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                     <span>字数总计：872</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span>阅读估时：3分钟</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量：<span id="busuanzi_value_page_pv"></span>次
+                    </span>
+                
+            </div>
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%95%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA"><span class="post-toc-text">单层感知机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%97%A8"><span class="post-toc-text">与门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%9D%9E%E9%97%A8"><span class="post-toc-text">与非门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%88%96%E9%97%A8"><span class="post-toc-text">或门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%82%E6%88%96%E9%97%A8"><span class="post-toc-text">异或门</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%84%9F%E6%82%9F"><span class="post-toc-text">感悟</span></a></li></ol>
+            
+        
+        <div class=".article-gallery"><p>“初恋模型”——感知机</p>
+<p>对于一个入门人工智能的小白来说，自己动手实现一个感知机对后续单层神经网络和多层神经网络的学习非常有帮助！</p>
+<h2 id="单层感知机"><a href="#单层感知机" class="headerlink" title="单层感知机"></a>单层感知机</h2><h3 id="与门"><a href="#与门" class="headerlink" title="与门"></a>与门</h3><blockquote>
+<p>x1, x2 均为 1 时，output ： 1</p>
+</blockquote>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">AND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    b = -<span class="number">0.7</span>  <span class="comment"># b是被称为偏置的参数，用于控制神经元被激活的容易程度</span></span><br><span class="line">    <span class="comment">#     if b + w * x &lt;= 0:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    你用上述的 if 不对，因为 w * x 之后还是一个数组！</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">if</span> b + <span class="built_in">sum</span>(w * x) &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">AND(<span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>当x1, x2 都是真（即1）时，才输出 1</p>
+<h3 id="与非门"><a href="#与非门" class="headerlink" title="与非门"></a>与非门</h3><blockquote>
+<p>与门的取反</p>
+</blockquote>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">NAND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    w = np.array([-<span class="number">0.5</span>, -<span class="number">0.5</span>])</span><br><span class="line">    b = <span class="number">0.7</span></span><br><span class="line">    tmp = b + <span class="built_in">sum</span>(x * w)</span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">NAND(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">0</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>即与们取反</p>
+<h3 id="或门"><a href="#或门" class="headerlink" title="或门"></a>或门</h3><blockquote>
+<p>x1, x2 有一个为 1 ，output：1</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def OR(x1, x2):</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    w = np.array([0.5, 0.5])</span><br><span class="line">    b = -0.2</span><br><span class="line">    tmp = b + sum(x * w)</span><br><span class="line">    if tmp &lt;= 0:</span><br><span class="line">        return  0</span><br><span class="line">    else:</span><br><span class="line">        return 1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在这里我们就得注意权重 <code>b</code>的范围了，因为如果<code>b</code>的范围设置不当，就会导致实际输出值与理论值完全不符！</p>
+<p>在这里，<code>b</code>的范围为：<code>-0.5 &lt; b &lt; 0</code>，这个范围时完全没问题的！</p>
+<p>接下来我们看一下或门的图像</p>
+<p><a href="/./../img/image-20251122134606326.png" title="image-20251122134606326" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134606326.png" alt="image-20251122134606326"></a></p>
+<p>以上三个感知机，均是两个输入值，经过权重，产生输出值。</p>
+<p><a href="/./../img/image-20251122134715477.png" title="image-20251122134715477" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134715477.png" alt="image-20251122134715477"></a></p>
+<h3 id="异或门"><a href="#异或门" class="headerlink" title="异或门"></a>异或门</h3><blockquote>
+<p>当且仅当 x1, x2 中有一个为 1 时，output：1</p>
+</blockquote>
+<p>在这里，我们不妨先看一下其图像：</p>
+<p><a href="/./../img/image-20251122134552483.png" title="image-20251122134552483" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134552483.png" alt="image-20251122134552483"></a></p>
+<p>由上图可见，其时非线性图像，我们似乎无法用简单的布尔运算类实现这个感知机，那么通过观察，</p>
+<p>我们可以通过使用 或门 和 与非门 来实现这个感知机</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">XOR</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    a = OR(x1, x2)</span><br><span class="line">    b = NAND(x1, x2)</span><br><span class="line">    <span class="keyword">return</span> AND(a, b)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个感知机，使用过两个单层感知机来实现的，如图：</p>
+<p><a href="/./../img/image-20251122134921778.png" title="image-20251122134921778" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134921778.png" alt="image-20251122134921778"></a></p>
+<p>当你实现完 与门、与非门、或门 的时候，你会发现，从 input — &gt; output 仅用几行控制语句就可以实现，并且其仅有2层（输入层、输出层），<br>但是当你实现 异或门的时候，它并不能仅用 控制语句 就可以实现，你就得通过调用 或门 和 与非门 来实现 异或门 的函数体来实现他。<br>这时，他就由单层感知机 变成了 多层感知机（三层，输入层、隐藏层、输出层）。</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>通过动手实现这四个感知机，让我更好地理解了多层神经元到底是怎么回事，让我们在入门深度学习的时候，不再感到无比抽象且难以理解。\</p>
+<p>回想大一下我在看这本书的时候，特别快的就看完了，感觉特别简单，哈哈！但是基本没有任何感悟，但是当我大二上再次打开这本书并且一步一步的跟着作者去实现里面的代码的时候，感受颇深！这就告诉我们：我们的认知会随着我们的知识储备的提升不断提升，而我们的知识储备（在计算机方面给）：包括但不限于<strong>数学</strong>、<strong>计算机系统基础</strong>、<strong>数据结构与算法</strong>这些对我们人工智能的发展都十分重要，当然<strong>工程能力</strong>也是必不可少的！</p>
+</div>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2025-11-22</span>
+            
+                <span>该篇文章被 Warnstein</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/'>
+                            人工智能
+                        </a>
+                    
+                        <a href='/tags/%E9%B1%BC%E4%B9%A6/'>
+                            鱼书
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/'>
+                            专业课
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    
+        
+            
+    
+            <div class="post-footer-pre-next">
+                
+
+                
+                    <span class="post-footer-pre-next-last-span-right">下一篇：<a href="/2025/11/21/%E8%AF%97%E5%8F%A5/">诗句</a>
+                    </span>
+                
+            </div>
+    
+        
+    
+
+    
+        
+
+     
+</div>
+
+
+
+
+                    
+
+                    <div class="footer">
+    
+        <span> 
+            © 乒乓球🏓爱好者 
+
+            
+                
+
+            
+                
+                    / <a href="/contact/"> 联系 </a>
+                
+
+            
+        </span>
+       
+    
+</div>
+
+
+
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊好好学习 天天向上🌊</span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery/lightgallery.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+     
+    if (typeof lightGallery !== "undefined") {
+        var options1 = {
+            selector: '.gallery-item',
+            plugins: [lgThumbnail, lgFullscreen, lgAutoplay, lgZoom, lgRotate, lgPager], // 启用插件
+            thumbnail: true,          // 显示缩略图
+            zoom: true,               // 启用缩放功
+            rotate: true,             // 启用旋转功能能
+            autoplay: true,        // 启用自动播放功能
+            fullScreen: true,      // 启用全屏功能
+            pager: false, //页码,
+            zoomFromOrigin: true,   // 从原始位置缩放
+            actualSize: true,       // 启用查看实际大小的功能
+            enableZoomAfter: 300,    // 延迟缩放，确保图片加载完成后可缩放
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1); // 修复选择器
+    }
+    
+</script>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
+<script src="/js/emojiHandler.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        wrapEmojis('.paper');
+    });
+</script>
