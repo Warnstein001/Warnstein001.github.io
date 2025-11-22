@@ -213,7 +213,7 @@
                     
                         &nbsp; | &nbsp;
                     
-                     <span>字数总计：865</span>
+                     <span>字数总计：957</span>
                 
                 
                     
@@ -235,25 +235,112 @@
     <div class="post-md">
         
             
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%95%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA"><span class="post-toc-text">单层感知机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%97%A8"><span class="post-toc-text">与门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%9D%9E%E9%97%A8"><span class="post-toc-text">与非门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%88%96%E9%97%A8"><span class="post-toc-text">或门</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%82%E6%88%96%E9%97%A8"><span class="post-toc-text">异或门</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%84%9F%E6%82%9F"><span class="post-toc-text">感悟</span></a></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%95%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA"><span class="post-toc-text">单层感知机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%97%A8"><span class="post-toc-text">与门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9C%9F%E5%80%BC%E8%A1%A8"><span class="post-toc-text">真值表</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="post-toc-text">代码实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8E%E9%9D%9E%E9%97%A8"><span class="post-toc-text">与非门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9C%9F%E5%80%BC%E8%A1%A8-1"><span class="post-toc-text">真值表</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="post-toc-text">代码实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%88%96%E9%97%A8"><span class="post-toc-text">或门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9C%9F%E5%80%BC%E8%A1%A8-2"><span class="post-toc-text">真值表</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BC%82%E6%88%96%E9%97%A8"><span class="post-toc-text">异或门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%9C%9F%E5%80%BC%E8%A1%A8-3"><span class="post-toc-text">真值表</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%84%9F%E6%82%9F"><span class="post-toc-text">感悟</span></a></li></ol>
             
         
         <div class=".article-gallery"><p>对于一个入门人工智能的小白来说，自己动手实现一个感知机对后续单层神经网络和多层神经网络的学习非常有帮助！</p>
 <h2 id="单层感知机"><a href="#单层感知机" class="headerlink" title="单层感知机"></a>单层感知机</h2><h3 id="与门"><a href="#与门" class="headerlink" title="与门"></a>与门</h3><blockquote>
 <p>x1, x2 均为 1 时，output ： 1</p>
 </blockquote>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">AND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    b = -<span class="number">0.7</span>  <span class="comment"># b是被称为偏置的参数，用于控制神经元被激活的容易程度</span></span><br><span class="line">    <span class="comment">#     if b + w * x &lt;= 0:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    你用上述的 if 不对，因为 w * x 之后还是一个数组！</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">if</span> b + <span class="built_in">sum</span>(w * x) &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">AND(<span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<h4 id="真值表"><a href="#真值表" class="headerlink" title="真值表"></a>真值表</h4><table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">AND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    b = -<span class="number">0.7</span>  <span class="comment"># b是被称为偏置的参数，用于控制神经元被激活的容易程度</span></span><br><span class="line">    <span class="comment">#     if b + w * x &lt;= 0:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    你用上述的 if 不对，因为 w * x 之后还是一个数组！</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    <span class="keyword">if</span> b + <span class="built_in">sum</span>(w * x) &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">AND(<span class="number">1</span>, <span class="number">0</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>当x1, x2 都是真（即1）时，才输出 1</p>
 <h3 id="与非门"><a href="#与非门" class="headerlink" title="与非门"></a>与非门</h3><blockquote>
 <p>与门的取反</p>
 </blockquote>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">NAND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    w = np.array([-<span class="number">0.5</span>, -<span class="number">0.5</span>])</span><br><span class="line">    b = <span class="number">0.7</span></span><br><span class="line">    tmp = b + <span class="built_in">sum</span>(x * w)</span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">NAND(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">0</span></span><br></pre></td></tr></tbody></table></figure>
+<h4 id="真值表-1"><a href="#真值表-1" class="headerlink" title="真值表"></a>真值表</h4><table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">NAND</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    w = np.array([-<span class="number">0.5</span>, -<span class="number">0.5</span>])</span><br><span class="line">    b = <span class="number">0.7</span></span><br><span class="line">    tmp = b + <span class="built_in">sum</span>(x * w)</span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">NAND(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">---</span><br><span class="line">output: <span class="number">0</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>即与们取反</p>
 <h3 id="或门"><a href="#或门" class="headerlink" title="或门"></a>或门</h3><blockquote>
 <p>x1, x2 有一个为 1 ，output：1</p>
 </blockquote>
+<h4 id="真值表-2"><a href="#真值表-2" class="headerlink" title="真值表"></a>真值表</h4><table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def OR(x1, x2):</span><br><span class="line">    x = np.array([x1, x2])</span><br><span class="line">    w = np.array([0.5, 0.5])</span><br><span class="line">    b = -0.2</span><br><span class="line">    tmp = b + sum(x * w)</span><br><span class="line">    if tmp &lt;= 0:</span><br><span class="line">        return  0</span><br><span class="line">    else:</span><br><span class="line">        return 1</span><br></pre></td></tr></tbody></table></figure>
 
 <p>在这里我们就得注意权重 <code>b</code>的范围了，因为如果<code>b</code>的范围设置不当，就会导致实际输出值与理论值完全不符！</p>
@@ -265,6 +352,35 @@
 <h3 id="异或门"><a href="#异或门" class="headerlink" title="异或门"></a>异或门</h3><blockquote>
 <p>当且仅当 x1, x2 中有一个为 1 时，output：1</p>
 </blockquote>
+<h4 id="真值表-3"><a href="#真值表-3" class="headerlink" title="真值表"></a>真值表</h4><table>
+<thead>
+<tr>
+<th>x1</th>
+<th>x2</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
 <p>在这里，我们不妨先看一下其图像：</p>
 <p><a href="/./../img/image-20251122134552483.png" title="image-20251122134552483" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134552483.png" alt="image-20251122134552483"></a></p>
 <p>由上图可见，其时非线性图像，我们似乎无法用简单的布尔运算类实现这个感知机，那么通过观察，</p>
@@ -274,7 +390,7 @@
 <p>这个感知机，使用过两个单层感知机来实现的，如图：</p>
 <p><a href="/./../img/image-20251122134921778.png" title="image-20251122134921778" class="gallery-item" style="box-shadow: none;"> <img src="/./../img/image-20251122134921778.png" alt="image-20251122134921778"></a></p>
 <p>当你实现完 与门、与非门、或门 的时候，你会发现，从 input — &gt; output 仅用几行控制语句就可以实现，并且其仅有2层（输入层、输出层），<br>但是当你实现 异或门的时候，它并不能仅用 控制语句 就可以实现，你就得通过调用 或门 和 与非门 来实现 异或门 的函数体来实现他。<br>这时，他就由单层感知机 变成了 多层感知机（三层，输入层、隐藏层、输出层）。</p>
-<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>通过动手实现这四个感知机，让我更好地理解了多层神经元到底是怎么回事，让我们在入门深度学习的时候，不再感到无比抽象且难以理解。\</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>通过动手实现这四个感知机，让我<strong>通过直线理解二分类</strong>，也让我更好地理解了多层神经元到底是怎么回事，让我们在入门深度学习的时候，不再感到无比抽象且难以理解。\</p>
 <p>回想大一下我在看这本书的时候，特别快的就看完了，感觉特别简单，哈哈！但是基本没有任何感悟，但是当我大二上再次打开这本书并且一步一步的跟着作者去实现里面的代码的时候，感受颇深！这就告诉我们：我们的认知会随着我们的知识储备的提升不断提升，而我们的知识储备（在计算机方面给）：包括但不限于<strong>数学</strong>、<strong>计算机系统基础</strong>、<strong>数据结构与算法</strong>这些对我们人工智能的发展都十分重要，当然<strong>工程能力</strong>也是必不可少的！</p>
 </div>
     </div>
