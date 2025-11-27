@@ -4,11 +4,12 @@
 # 3. 执行命令：hexo new page index 生成首页；执行命令：hexo new page list 生成列表页面；
 # 4. 执行命令：hexo clean && hexo g && hexo s 直接查看页面效果
 menu:
-  首页: / #需要hexo new page index,在index/index.md填写的内容将会展现在首页上
-  文章: /list/ # 需要hexo new page list
-  标签: /tags/ # 需要hexo new page tags
-  分类: /categories/ # 需要hexo new page categories
-  关于: /about/
+  🏡首页: / #需要hexo new page index,在index/index.md填写的内容将会展现在首页上
+  🌌文章: /list/ # 需要hexo new page list
+  🔖分类: /categories/ # 需要hexo new page categories
+  📌标签: /tags/ # 需要hexo new page tags
+  🍃随笔: /bookmarks/
+  🌕关于: /about/
   # 🎨作品: \works\ # 需要hexo new page works
   # 💬留言: \comments\ # 需要hexo new page comments
   # 📚学习日志: \study\ # 需要hexo new page study
@@ -16,8 +17,8 @@ menu:
 
 # 首页你想要展示的menu链接，注意当你修改了menu中的别名，这里要随着更改，不然你会疑惑怎么首页没有修改后的别名
 showInMenu:  # menu 中的哪些页面显示在首页中（“首页”必定显示）
-  - 文章  # 将在首页显示 文章 链接
-  - 关于
+  - 🌌文章  # 将在首页显示 文章 链接
+  - 🌕关于
   # - 作品
   # - 留言
   # - 标签

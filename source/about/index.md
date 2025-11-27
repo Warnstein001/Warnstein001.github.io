@@ -1,5 +1,5 @@
 ---
-title: 关于
+title: 🌕关于
 date: 2025-11-19 16:24:00
 type: page
 comments: false
@@ -29,15 +29,5 @@ comments: false
 
 ### 联系方式
 
-- 📧 Email: 437861513@qq.com
-- 🌐 博客: [Warnstein](/)
-
-### 关于本站
-
-本站使用 [Hexo](https://hexo.io/) 搭建，主题为 [A4](https://github.com/HiNinoJay/hexo-theme-A4)。
-
-这里记录我的学习笔记、技术分享和生活感悟，希望能对你有所帮助。
-
----
-
-*感谢你的访问！* 🌟
+- Email: 437861513@qq.com
+- GitHub: https://github.com/Warnstein001
