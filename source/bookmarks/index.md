@@ -3,7 +3,36 @@ title: 🍃随笔
 date: 2025-11-21 18:36:00
 type: page
 comments: false
+mathjax: true
 ---
+
+<div style="border: 1px solid #333; padding: 20px; margin: 20px 0;" markdown="1">
+
+不光有敌变我变，还有我变敌变，更有我变我变。
+<p align="right">——读《苦难辉煌》有感</p>
+</div>
+
+<div style="border: 1px solid #333; padding: 20px; margin: 20px 0;" markdown="1">
+
+Calculus begins with numbers **$x$** and functions $f(x)$.\
+Linear algebra begins with vectors $v, w$ and their combinations $c$**$v$** + $d$**$w$**.
+<p align="right">——摘自《Introduction to Linear Algebra》</p>
+</div>
+
+
+
+<div style="border: 1px solid #333; padding: 20px; margin: 20px 0;" markdown="1">
+
+真理往往掌握在少数人的手中。
+<p align="right">——摘自《苦难辉煌》</p>
+</div>
+
+<div style="border: 1px solid #333; padding: 20px; margin: 20px 0;" markdown="1">
+
+失败孕育着胜利的种子，胜利也包含着失败的基因。
+<p align="right">——摘自《苦难辉煌》</p>
+</div>
+
 
 <div style="border: 1px solid #333; padding: 20px; margin: 20px 0;" markdown="1">
 

@@ -8,7 +8,6 @@ tags:
   - 人工智能
   - 《深度学习入门：基于python实现》
 mathjax: true
-permalink: activation-function 
 ---
 
 目标🎯：

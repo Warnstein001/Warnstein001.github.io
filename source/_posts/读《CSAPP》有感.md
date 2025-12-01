@@ -3,6 +3,7 @@ title: 读《CSAPP》有感
 date: 2025-11-23 14:42:00
 categories: 
   - 计算机
+  - csapp
 tags:
   - 感悟
   - csapp
