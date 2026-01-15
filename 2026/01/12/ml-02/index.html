@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Lecture02：机器学习和深度学习基本概念（下）" />
+    <meta name="hexo-theme-A4" content="v2.0.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/headshot.jpg">
+    <title>Warnstein</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
+
+
+   
+        
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+    <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css' /> 
+<meta name="generator" content="Hexo 8.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+    
+
+    
+    
+
+
+
+    
+
+    
+    
+
+
+
+
+    
+    
+
+
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '40px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            
+                <div class="left-toc-container">
+                    <nav id="toc" class="bs-docs-sidebar"></nav>
+                </div>
+            
+        
+        <div class="paper">
+
+            
+
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <style>
+            .header-img {
+                width: 56px;
+                height: auto;
+                object-fit: cover; /* 保持图片比例 */
+                transition: transform 0.3s ease-in-out; 
+                border-radius: 50%; 
+            }
+            
+        </style>
+        <img 
+            alt="^-^" 
+            cache-control="max-age=86400" 
+            class="header-img" 
+            src="/img/headshot.jpg" 
+        />
+        <div class="header-content">
+            <a class="logo" href="/">Warnstein</a> 
+            <span class="description">CS本科生 | 阅读写作爱好者</span> 
+        </div>
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">🏡首页</a></li>
+            
+        
+            
+                <li><a href="/categories/">🔖目录</a></li>
+            
+        
+            
+                <li><a href="/tags/">📌标签</a></li>
+            
+        
+            
+                <li><a href="/list/">🌌文章</a></li>
+            
+        
+            
+                <li><a href="/bookmarks/">🍃随笔</a></li>
+            
+        
+            
+                <li><a href="/about/">🌕关于</a></li>
+            
+        
+    </ul>
+</div>
+
+                    
+                    
+
+                    
+                    
+
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+    
+
+    
+        
+            
+                <div class="post-main-title" style="text-align: center;">
+                    Lecture02：机器学习和深度学习基本概念（下）
+                </div>
+            
+        
+      
+    
+
+    
+
+        
+            <div class="post-head-meta-center">
+        
+                
+                    <span>最近更新：2026-01-15</span> 
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                     <span>字数总计：2.2k</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span>阅读估时：7分钟</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量：<span id="busuanzi_value_page_pv"></span>次
+                    </span>
+                
+            </div>
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E6%A8%A1%E5%9E%8B%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B"><span class="post-toc-text">函数模型——线性模型</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="post-toc-text">局限性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="post-toc-text">结论</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%9E%84%E5%BB%BA%E6%9B%B4%E7%81%B5%E6%B4%BB%E7%9A%84%E6%A8%A1%E5%9E%8B%E2%80%94%E2%80%94Sigmoid"><span class="post-toc-text">构建更灵活的模型——Sigmoid</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%A5%E4%B8%8A%E4%B8%A4%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="post-toc-text">以上两个函数的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%BC%8F%EF%BC%88PPT%E9%87%8C%E4%BB%8E%E5%8D%95%E4%B8%AAx%E5%BC%80%E5%A7%8B%E5%8F%A0%E5%8A%A0%E5%A4%9A%E4%B8%AAsigmoid%E7%9A%84%E9%82%A3%E7%A7%8D%EF%BC%89%EF%BC%9A"><span class="post-toc-text">第一个公式（PPT里从单个x开始叠加多个sigmoid的那种）：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%AC%E5%BC%8F%EF%BC%88%E5%BC%95%E5%85%A5%E5%A4%9A%E7%89%B9%E5%BE%81%E5%90%8E%E7%9A%84%E6%96%B0%E6%A8%A1%E5%9E%8B%EF%BC%89%EF%BC%9A"><span class="post-toc-text">第二个公式（引入多特征后的新模型）：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%8F%E7%BB%93%E5%AF%B9%E6%AF%94"><span class="post-toc-text">小结对比</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E8%BF%99%E5%BC%A0%E5%9B%BE%E8%AF%A6%E7%BB%86%E5%89%96%E6%9E%90%E4%BA%86%E5%8D%95%E5%B1%82DNN"><span class="post-toc-text">这张图详细剖析了单层DNN</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AE%9A%E4%B9%89%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%EF%BC%88Define-Loss-Function%EF%BC%89"><span class="post-toc-text">定义损失函数（Define Loss Function）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loss%E6%B1%82%E5%AE%8C%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%94%A8%E9%80%94%EF%BC%88Step-3-%E7%9A%84%E5%89%8D%E6%8F%90%EF%BC%89"><span class="post-toc-text">Loss求完的直接用途（Step 3 的前提）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%B4%E5%B9%BF%E7%9A%84%E7%94%A8%E9%80%94%EF%BC%88%E8%B4%AF%E7%A9%BF%E6%95%B4%E4%B8%AA%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B%EF%BC%89"><span class="post-toc-text">更广的用途（贯穿整个机器学习流程）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3%EF%BC%88%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E7%82%B9%E8%BF%99%E4%B9%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="post-toc-text">个人理解（为什么这点这么重要）</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%EF%BC%88Optimization%EF%BC%89"><span class="post-toc-text">优化（Optimization）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-text">总结</span></a></li></ol>
+            
+        
+        <div class=".article-gallery"><div style="border-left: 4px solid #ff9800; padding: 15px 20px; margin: 20px 0; background-color: #fff8f0;">
+回顾
+
+<p>在上一讲中，说明了机器学习就是找一个函数，然后在这个函数中加入参数，超参数等并对其进行优化使其能够满足我们的需要。</p>
+</div>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 回顾</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h1 id="函数模型——线性模型"><a href="#函数模型——线性模型" class="headerlink" title="函数模型——线性模型"></a>函数模型——线性模型</h1><p>在课上，老师以他自己原来的YouTube频道的观看人数作为训练数据集，以开始使用最简单的函数模型，即<br>$$<br>y=b+wx<br>$$<br>再通过不断调整$w,x$对函数模型进行优化。</p>
+<h1 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h1><p>线性模型表达能力太弱（Model Bias严重），即所有线性模型组合出来的还是直线 / 平面，无法你和复杂的非线性曲线。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>需要更灵活的、非线性的模型！</p>
+<h1 id="构建更灵活的模型——Sigmoid"><a href="#构建更灵活的模型——Sigmoid" class="headerlink" title="构建更灵活的模型——Sigmoid"></a>构建更灵活的模型——Sigmoid</h1><blockquote>
+<p>在开始，老师用的是 Hard Sigmoid——用 ReLU 拼出来的<br>但是我们也可以选取一个曲线来逼近他，即 Sigmoid Function</p>
+</blockquote>
+<p>Sigmoid Function 公示如下：<br>$$<br>y=c\frac{1}{1+e^{-(b+wx)} }<br>$$<br>不同的 $w、b、c$值都会产生不同的效果，如图<br><a href="/image-1.png" title="alt text" class="gallery-item" style="box-shadow: none;"> <img src="/image-1.png" alt="alt text"></a>Sigmoid在此处的函数模型：<br>$$<br>y=b+\sum_{i}^{} c_isigmoid(b_i+w_ix_i)<br>$$但如果我还想在使其变得更为复杂即：<br>$$<br>y=b+\sum_{i}^{} c_isigmoid(b_i+\sum_{j}^{} w_{ij}x_j)<br>$$</p>
+<h2 id="以上两个函数的区别"><a href="#以上两个函数的区别" class="headerlink" title="以上两个函数的区别"></a>以上两个函数的区别</h2><h3 id="第一个公式（PPT里从单个x开始叠加多个sigmoid的那种）："><a href="#第一个公式（PPT里从单个x开始叠加多个sigmoid的那种）：" class="headerlink" title="第一个公式（PPT里从单个x开始叠加多个sigmoid的那种）："></a>第一个公式（PPT里从单个x开始叠加多个sigmoid的那种）：</h3><p>$$ y = b + \sum_i c_i \cdot \sigma(b_i + w_i x_i) $$</p>
+<p>注意：这里的 $x_i$ 其实不是“第i天”，PPT里这个阶段还是<strong>只有一个输入特征x</strong>（比如只用前一天的观看数），所有sigmoid共用同一个x，只是每个sigmoid有自己的 $w_i, b_i, c_i$。</p>
+<p>正确理解：</p>
+<ul>
+<li>每个sigmoid<strong>只看同一个单一天的x</strong>（单特征输入）。</li>
+<li>通过多个（不同的参数）sigmoid的加权求和 + 整体bias b，来拼出复杂的非线性曲线。</li>
+<li>目的：突破线性模型的限制，用“多个S形曲线叠加”逼近任意形状。</li>
+<li>这还不是真正的“多特征”神经网络，只是用多个独立sigmoid单元增强表达能力（有点像“宽”网络）。</li>
+</ul>
+<p>要强调的是<strong>所有sigmoid都只看这一天</strong>，不是“不同的sigmoid对不同的天”。</p>
+<h3 id="第二个公式（引入多特征后的新模型）："><a href="#第二个公式（引入多特征后的新模型）：" class="headerlink" title="第二个公式（引入多特征后的新模型）："></a>第二个公式（引入多特征后的新模型）：</h3><p>$$<br>y = b + \sum_i c_i \cdot \sigma\left(b_i + \sum_j w_{ij} x_j\right)<br>$$</p>
+<p>现在输入是多个特征 $x_j$（比如过去多天的观看数 $x₁, x₂, …, xₙ$）。</p>
+<p>正确理解：</p>
+<ul>
+<li>每个sigmoid<strong>同时看多天</strong>（所有 $x_j$ 通过不同的权重 $w_{ij}$ 加权求和）。</li>
+<li>相当于每个sigmoid（隐藏单元）先对多天特征做线性组合，再非线性激活，最后再加权求和得到y。</li>
+<li>这就是标准的<strong>单隐藏层全连接神经网络</strong>的数学表达：<ul>
+<li>内层的 $\sum_j w_{ij} x_j + b_i$ 是隐藏神经元对输入向量的线性变换。</li>
+<li>外层的 $\sum_i c_i \cdot a_i + b$ 是输出层。</li>
+</ul>
+</li>
+<li>比第一个公式强大多了，因为隐藏单元之间开始“共享和组合”多特征的信息。</li>
+</ul>
+<p>你的总结里说“这个一个sigmoid 只对多天进行应用”——方向对，但要反过来：第一个公式是“每个sigmoid只看单天”，第二个才是“每个sigmoid看多天”。</p>
+<h3 id="小结对比"><a href="#小结对比" class="headerlink" title="小结对比"></a>小结对比</h3><table>
+<thead>
+<tr>
+<th>公式阶段</th>
+<th>输入特征</th>
+<th>每个sigmoid看到什么</th>
+<th>模型本质</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一种（多个独立sigmoid）</td>
+<td>单个x（单天）</td>
+<td>只看这一个x（但参数不同）</td>
+<td>宽而浅的非线性组合</td>
+<td>突破线性限制，拼复杂曲线</td>
+</tr>
+<tr>
+<td>第二种（多特征输入）</td>
+<td>多个xⱼ（多天）</td>
+<td>同时看所有xⱼ的线性组合</td>
+<td>单隐藏层全连接网络</td>
+<td>特征融合，真正神经网络的起点</td>
+</tr>
+</tbody></table>
+<p>这样区分后，你再看PPT后面矩阵形式的那几页$（W x + b → σ → cᵀ a + b）$就完全连上了——第二个公式就是矩阵版的单层DNN（Deep Neural Network）。</p>
+<h1 id="这张图详细剖析了单层DNN"><a href="#这张图详细剖析了单层DNN" class="headerlink" title="这张图详细剖析了单层DNN"></a>这张图详细剖析了单层DNN</h1><p><a href="/Pasted%20image%2020260115215145.png" title="alt text" class="gallery-item" style="box-shadow: none;"> <img src="/Pasted%20image%2020260115215145.png" alt="alt text"></a></p>
+<blockquote>
+<p>位于pdf的35页</p>
+</blockquote>
+<h1 id="定义损失函数（Define-Loss-Function）"><a href="#定义损失函数（Define-Loss-Function）" class="headerlink" title="定义损失函数（Define Loss Function）"></a>定义损失函数（Define Loss Function）</h1><p>$$<br>L=\frac{1}{N} \sum_{n}^{}e_n<br>$$</p>
+<div style="border-left: 4px solid #4CAF50; padding: 15px 20px; margin: 20px 0; background-color: #f1f8f4;">
+title: Loss 求完有什么用呢
+</div>
+
+
+<p>此问题戳中了机器学习三步骤的核心逻辑。我之前总结Loss的时候说了它“量化模型好坏”，但没细说“求完之后干嘛用”。现在结合PPT那些页（尤其是Error Surface那张图），我彻底明白了：<strong>Loss不是算完就完事的，它是整个优化的“靶子”和“地图”！</strong></p>
+<h3 id="Loss求完的直接用途（Step-3-的前提）"><a href="#Loss求完的直接用途（Step-3-的前提）" class="headerlink" title="Loss求完的直接用途（Step 3 的前提）"></a>Loss求完的直接用途（Step 3 的前提）</h3><ol>
+<li><p><strong>把抽象的“好坏”变成可优化的数学目标</strong></p>
+<ul>
+<li>我们有无数种可能的参数（w, b，或者神经网络里成千上万的参数）。</li>
+<li>光说“这组参数预测准”没用，必须有个<strong>单一的标量分数</strong>来比较哪组更好。</li>
+<li>Loss就是这个分数：<strong>Loss越小，参数越好</strong>。</li>
+<li>PPT里反复强调：<strong>Loss is a function of parameters L(θ)</strong> → 它把参数空间映射到一个数值。</li>
+</ul>
+</li>
+<li><p><strong>画出 Error Surface（误差曲面）——优化前的“地图”</strong></p>
+<ul>
+<li>PPT第13页那张彩色图（w横轴，b纵轴，颜色表示Loss值）就是经典的Error Surface。</li>
+<li>亮的地方Loss大（参数差），暗的地方Loss小（参数好），最暗的点就是全局最优。</li>
+<li>求Loss的目的之一：<strong>可视化参数空间的景观</strong>，让我们知道“山谷”在哪里（虽然高维时看不到，但数学上一样）。</li>
+<li>没有Loss，就没法画这张图，也没法知道往哪走。</li>
+</ul>
+</li>
+<li><p><strong>指导梯度下降——真正“用”Loss的地方</strong></p>
+<ul>
+<li>最核心的用途：<strong>计算梯度，更新参数</strong>！</li>
+<li>梯度下降需要知道当前点“坡度”多陡、方向往哪：$∂L/∂w$ 和 $∂L/∂b$。</li>
+<li>这些偏导数就是从Loss函数求出来的（链式法则）。</li>
+<li>PPT第14-17页：随机挑个初始点 → 计算梯度 → 沿着负梯度走一步 → 新点再算Loss和梯度 → 重复，直到走到谷底（Loss最小）。</li>
+<li>结果：找到 w*, b* 使得 L(w*, b*) 最小 → 这组参数就是学到的最佳模型！</li>
+</ul>
+<p>简单说：<strong>Loss是“下山”的高度函数</strong>，梯度是“最陡方向”，我们反复求Loss和它的导数来下山。</p>
+</li>
+</ol>
+<h3 id="更广的用途（贯穿整个机器学习流程）"><a href="#更广的用途（贯穿整个机器学习流程）" class="headerlink" title="更广的用途（贯穿整个机器学习流程）"></a>更广的用途（贯穿整个机器学习流程）</h3><ul>
+<li><p><strong>评估和比较模型</strong></p>
+<ul>
+<li>不同模型（线性 vs 神经网络）、不同超参数（学习率、层数），训练完比谁的Loss小。</li>
+<li>训练Loss vs 测试Loss：判断过拟合（PPT后面实验里，4层网络训练Loss超低但测试Loss上升）。</li>
+</ul>
+</li>
+<li><p><strong>监控训练过程</strong></p>
+<ul>
+<li>每个epoch画Loss曲线：下降快说明学得好，震荡说明学习率太大，停滞说明卡住了。</li>
+</ul>
+</li>
+<li><p><strong>理论基础</strong></p>
+<ul>
+<li>很多高级技巧（正则化、早停、Dropout）都是在Loss上加罚项或监控Loss来防止过拟合。</li>
+</ul>
+</li>
+</ul>
+<h3 id="个人理解（为什么这点这么重要）"><a href="#个人理解（为什么这点这么重要）" class="headerlink" title="个人理解（为什么这点这么重要）"></a>个人理解（为什么这点这么重要）</h3><p>以前我以为Loss就是“算个误差平均”，现在才明白：<strong>没有Loss，就没法自动优化参数</strong>。整个机器学习/深度学习的“学习”本质就是“最小化Loss”。</p>
+<p>PPT用观看数案例举例特别清楚：</p>
+<ul>
+<li>随便一组参数（w=1, b=0.5k）→ 算出一堆误差 → 平均成Loss</li>
+<li>然后用这个Loss的曲面指导梯度下降 → 最终找到 $w≈0.97, b≈0.1k$（训练Loss只有0.48k）</li>
+</ul>
+<p>如果不求Loss，直接手动调参数？不可能，参数太多（神经网络动辄百万级）。Loss把问题变成了标准的优化问题，梯度下降就能自动解决。</p>
+<p>这部分连起来后，三步骤就闭环了：</p>
+<ol>
+<li>选模型（决定参数形式）</li>
+<li>定义Loss（给出评分标准）</li>
+<li>用Loss驱动优化（找到最佳参数）</li>
+</ol>
+<h1 id="优化（Optimization）"><a href="#优化（Optimization）" class="headerlink" title="优化（Optimization）"></a>优化（Optimization）</h1><p>这里就有涉及到两个hyperparameters：batch（对数据集进行分类） 和 epoch（对训练轮次进行规定）<br><a href="/Pasted%20image%2020260115220435.png" title="alt text" class="gallery-item" style="box-shadow: none;"> <img src="/Pasted%20image%2020260115220435.png" alt="alt text"></a><br>通过这张图理解epoch和batch之间的关系以及更新的参数的次数</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本节课学到以下知识：</p>
+<ol>
+<li>机器学习的核心本质</li>
+<li>机器学习三板斧</li>
+<li>从线性模型到深度学习的演进<ul>
+<li>先用简单线性模型 y = b + w x₁，走三板斧（算Loss → GD优化），但泛化差（Model Bias严重）。</li>
+<li>不满意 → 升级模型：多个Sigmoid/ReLU求和 → 多特征输入 → 单层全连接DNN（矩阵形式，P31-37重点！）→ 多层堆叠成Deep Learning。</li>
+<li>再走同样的Loss + GD，效果更好，但层数太多会出现过拟合（实验：3层最佳，4层测试Loss上升）。<br>过程中重点学到：</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>求Loss Function 的方法</li>
+<li>Optimization 的方式 Gradient Decent</li>
+<li>Sigmoid Function &amp;&amp; ReLU</li>
+<li>单层DNN中各个参数的解析（P35 is important）</li>
+<li>η（学习率） epoch 和 batch 等 hyperparameter 定义方式（这个我们后续还要学习具体定义为多大好一点！）</li>
+</ul>
+</div>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2026-01-12</span>
+            
+                <span>该篇文章被 Warnstein</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/ml/'>
+                            ml
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/Machine-Learning/'>
+                            Machine-Learning
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    
+        
+            
+    
+            <div class="post-footer-pre-next">
+                
+
+                
+                    <span class="post-footer-pre-next-last-span-right">下一篇：<a href="/2026/01/12/ml-01/">Lecture01：机器学习和深度学习基本概念（上）</a>
+                    </span>
+                
+            </div>
+    
+        
+    
+
+    
+        
+
+     
+</div>
+
+
+
+
+                    
+
+                    <div class="footer">
+    
+        <span> 
+            © 乒乓球🏓爱好者 
+
+            
+                
+
+            
+                
+                    / <a href="/contact/"> 联系 </a>
+                
+
+            
+        </span>
+       
+    
+</div>
+
+
+
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>🌊好好学习 天天向上🌊</span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery/lightgallery.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+     
+    if (typeof lightGallery !== "undefined") {
+        var options1 = {
+            selector: '.gallery-item',
+            plugins: [lgThumbnail, lgFullscreen, lgAutoplay, lgZoom, lgRotate, lgPager],
+            thumbnail: true,
+            zoom: true,
+            rotate: true,
+            autoplay: true,
+            fullScreen: true,
+            pager: false,
+            zoomFromOrigin: true,
+            actualSize: true,
+            enableZoomAfter: 300,
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+    }
+    
+</script>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
+<script src="/js/emojiHandler.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        wrapEmojis('.paper');
+    });
+</script>
